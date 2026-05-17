@@ -1,0 +1,9 @@
+services:
+  # Nginx Web Server Service
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
+

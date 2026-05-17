@@ -1,0 +1,584 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background: #ffffff;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  width: 60px;
+  height: 60px;
+  background-image: url("saherlogo.jpg");
+  background-size: contain;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  font-family: Arial, sans-serif;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  font-size: 1.15rem;
+  display: inline-block;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: teal;
+  transform: scale(1.08);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: black;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+/* All sections*/
+.section {
+  height: 100vh;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  min-height: 90vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1 1 500px;
+  max-width: 700px;
+  color: rgb(42, 42, 42);
+}
+
+.hero-content h2 {
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  background: linear-gradient(90deg, #27ae60, #d946ef);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+  opacity: 85%;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.stats-section {
+  display: flex;
+  background: #cccccc;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.stats-section h2 {
+  color: teal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stats-section p {
+  color: rgb(0, 0, 0);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+
+.about-content {
+  display: flex;
+  background: #ffffff;
+  gap: 2rem;
+  border-radius: 2rem;
+
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.about-content .left-about {
+  background: rgb(1, 109, 109);
+  color: white;
+  border-radius: 2rem;
+
+  padding: 8rem;
+  justify-content: space-evenly;
+}
+
+.about-content .left-about h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 900;
+  padding-bottom: 2rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.about-content .left-about span {
+  color: #ffffff;
+  font-size: larger;
+  opacity: 85%;
+}
+
+.about-content .right-about {
+  background: #81d7c0;
+  color: rgb(0, 0, 0);
+  border-radius: 2rem;
+
+  padding: 8rem;
+  padding-top: 6rem;
+  justify-content: space-evenly;
+}
+
+.about-content .right-about p {
+  color: rgb(32, 32, 32);
+  font-family: monospace;
+  text-shadow: rgb(120, 120, 120) 0.3em 0.1em 0.2em;
+  display: flex;
+  padding-bottom: 2.5rem;
+  justify-content: left;
+  margin-left: 4.5rem;
+}
+
+.about-content .right-about h1 {
+  font-weight: 900;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.about-content .right-about span {
+  color: rgb(0, 0, 0);
+  padding: 5rem;
+  justify-items: center;
+  font-size: larger;
+  opacity: 85%;
+}
+/*Marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 1.5rem 0;
+  background: linear-gradient(90deg, #27ae60, #d946ef);
+}
+
+.track {
+  display: inline-flex;
+  width: max-content;
+  animation: scroll 12s linear infinite;
+}
+
+.item {
+  display: inline-block;
+  margin-right: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* */
+.box-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.box {
+  flex: 1;
+  padding: 5rem;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  height: 70vh;
+  text-align: center;
+  color: white;
+}
+
+.box h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.box p {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(255, 255, 255);
+  padding-top: 1rem;
+  opacity: 85%;
+  font-size: 1.6rem;
+}
+
+.box1 {
+  background: rgb(78, 165, 87);
+}
+
+.box2 {
+  background: rgb(57, 180, 69);
+}
+
+.box3 {
+  background: rgb(35, 180, 49);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* =========================
+   BUTTONS
+========================= */
+.btn,
+.prob {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: "SN Pro", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 15px;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  color: #27ae60;
+  border: 2px solid #27ae60;
+}
+
+.btn:hover {
+  background: #27ae60;
+  color: white;
+}
+
+.prob {
+  color: #d946ef;
+  border: 2px solid #d946ef;
+  margin-left: 1rem;
+}
+
+.prob:hover {
+  background: #d946ef;
+  color: white;
+}
+#programmes {
+  background: #e5e5e5;
+}
+#contact {
+  background: #e5e5e5;
+}
+#contact textarea {
+  height: 50vh;
+}
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 30px 5%;
+  text-align: center;
+  background-color: #ecf0f1;
+}
+
+.section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  background: linear-gradient(1deg, #27ae60, #d946ef);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  height: 70vh;
+  margin-top: 4.75rem;
+}
+
+.card {
+  background: #ffd7fe;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cards h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: xx-large;
+  margin-bottom: 15px;
+}
+
+.cards p {
+  color: rgb(255, 255, 255);
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  padding-top: 2rem;
+  font-weight: 500;
+  opacity: 95%;
+}
+.cards .card:nth-child(1) {
+  padding: 5rem;
+  background: #ffd04d;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cards .card:nth-child(2) {
+  padding: 5rem;
+  background: #ff2a4e;
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.cards .card:nth-child(3) {
+  padding: 5rem;
+  background: #2a51ff;
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.cards .card:nth-child(4) {
+  padding: 5rem;
+  background: #9317ff;
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   DONATE
+========================= */
+.donate {
+  background: #ecf0f1;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0;
+  }
+
+  .hero-image img {
+    max-width: 500px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background: #34495e;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn,
+  .prob {
+    width: 100%;
+    padding-top: 5rem;
+    max-width: 280px;
+    margin: 10px auto;
+  }
+
+  .prob {
+    margin-left: 0;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navbar .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
