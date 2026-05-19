@@ -1,29 +1,29 @@
 // Mobile menu toggle
-const toggleBtn = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const toggleBtn = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-toggleBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+toggleBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
 // Donate button alert
 function donateAlert() {
-    alert("Thank you for your interest in donating! ❤️");
+  alert("Thank you for your interest in donating! ❤️");
 }
 
 // Contact form submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert("Message sent successfully!");
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Message sent successfully!");
 });
 
 //Hero image slider
 const images = [
-  "Hero.jpg",
-  "Hero1.jpg",  
-  "Hero2.jpg",
-  "Hero3.jpg",
-  "Hero4.jpg"
+  "public/Hero.jpg",
+  "public/Hero1.jpg",
+  "public/Hero2.jpg",
+  "public/Hero3.jpg",
+  "public/Hero4.jpg",
 ];
 
 let index = 0;

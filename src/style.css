@@ -269,7 +269,6 @@ body {
 
 .box h3 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(255, 255, 255);
   font-weight: 900;
   font-size: 2.5rem;
   margin-bottom: 25px;
@@ -277,23 +276,23 @@ body {
 
 .box p {
   font-family: "Times New Roman", Times, serif;
-  color: rgb(255, 255, 255);
   padding-top: 1rem;
   opacity: 85%;
   font-size: 1.6rem;
 }
 
 .box1 {
-  background: rgb(78, 165, 87);
+  border: 5px solid orange;
+  color : orange;
 }
 
 .box2 {
-  background: rgb(57, 180, 69);
-}
+border: 5px solid rgb(130, 130, 130);
+  color :rgb(130, 130, 130)}
 
 .box3 {
-  background: rgb(35, 180, 49);
-}
+border: 5px solid green;
+  color : green;}
 
 @keyframes scroll {
   from {
